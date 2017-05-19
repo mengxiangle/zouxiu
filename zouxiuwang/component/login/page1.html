@@ -1,0 +1,267 @@
+<div class="containel">
+    <ul>
+        <li class="active"><a href="">短信登录</a></li>
+        <li><a ui-sref="login.page2">密码登录</a></li>
+    </ul>
+    <div class="panel">
+        <div class="pan now denglu_a">
+            <div class="panfir">
+                <input type="text" class="phoneNum" id="zh">
+                <label for="zh" id="zhlabel">手机号码</label>
+            </div>
+            <div class="pansec">
+                <input type="text" id="yz">
+                <label for="yz" id="yzlabel">短信验证</label>
+                <a href="">获取验证码</a>
+            </div>
+            <div class="panthd">
+                    <span class="thdl" title="为了帐号安全，请勿在公共电脑上勾选此选项">
+                        <i></i>两周内自动登录</span>
+                <span class="thdr">找回密码</span>
+            </div>
+            <div class="denglu" ng-click="loginFn()"><a href="">登&nbsp;录</a></div>
+        </div>
+
+        <div class="partner">
+            <div class="partnert">
+                <div class="lefthr"><hr></div>
+                <div class="midhr">合作网站帐号登录</div>
+                <div class="righthr"><hr></div>
+            </div>
+
+            <div class="partnerb">
+                <span class="partfir"></span>
+                <span class="partsec"></span>
+                <span class="partthd"></span>
+                <span class="partfor"></span>
+                <span class="partfiv"></span>
+            </div>
+        </div>
+        <a ui-sref="login.page3" class="login_ewmg"></a>
+        <a ui-sref="login.page3" class="login_codego"></a>
+    </div>
+</div>
+
+
+<style>
+    .containel{
+         position: absolute;
+         top:100px;
+         right:100px;
+         margin-top: 50px;
+         border: 1px solid #d8d8d8;
+         box-shadow: 0 0 20px #c8c8c8;
+     }
+    .containel ul{
+        width:420px;
+        height:52px;
+    }
+    .containel li{
+        width:210px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        background-color: #f7f7f9;
+        border-bottom: 2px solid #f7f7f9;
+        float: left;
+        color: #999;
+        cursor: pointer;
+    }
+    .containel .active{
+        border-bottom:2px solid black;
+    }
+    .containel li a{
+        color: #999;
+    }
+    .containel .active a{
+        color: #333;
+    }
+    .containel .hover{
+        border-bottom:2px solid black;
+        color: black;
+    }
+    .panel{
+        width:420px;
+        height: 460px;
+        padding-top: 10px;
+        text-align: center;
+        background-color: white;
+    }
+    .pan{
+        width: 300px;
+        font-size: 14px;
+        margin: 0 auto;
+        display: none;
+    }
+    .now{
+        display: block;
+    }
+    #content .panmima .pansec input{
+        width:296px;
+    }
+    .panel div{
+        margin-top: 20px;
+    }
+    .panel input{
+        height:36px;
+        font-size: 14px;
+        text-indent: 20px;
+    }
+    .panfir{
+        position: relative;
+    }
+    .panel .panfir input{
+        width:296px;
+    }
+    #zhlabel{
+        color: #afafaf;
+        padding: 0 3px;
+        height: 20px;
+        line-height: 20px;
+        background: #fff;
+        font-size: 12px;
+        position: absolute;
+        left: 8px;
+        top: 9px;
+        cursor: text;
+    }
+    .panel .pansec{
+        height: 36px;
+        text-align: center;
+    }
+    .panel .pansec a{
+        width:100px;
+        height: 38px;
+        font-size: 12px;
+        margin-left: 13px;
+        display: block;
+        float: right;
+        text-align: center;
+        line-height: 38px;
+        color: #333;
+        background-color: #f1f1f1;
+        border: 1px solid #ccc;
+    }
+    .pansec{
+        position: relative;
+    }
+    .panel .pansec input{
+        float: left;
+        width: 180px;
+    }
+    #yzlabel{
+        color: #afafaf;
+        padding: 0 3px;
+        height: 20px;
+        line-height: 20px;
+        background: #fff;
+        font-size: 12px;
+        position: absolute;
+        left: 8px;
+        top: 9px;
+        cursor: text;
+    }
+    .panthd{
+        height: 38px;
+        line-height: 38px;
+    }
+    .panthd .thdl{
+        float: left;
+        cursor: pointer;
+    }
+    .panthd .thdl i{
+        width: 20px;
+        height: 38px;
+        float: left;
+        background-image: url("images/login_sprite.png");
+        background-repeat: no-repeat;
+        background-position:-180px 11px;
+    }
+    .panthd .thdr{
+        float: right;
+        cursor: pointer;
+    }
+    .denglu a{
+        width: 300px;
+        height: 40px;
+        display: block;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        background: url("images/login_sprite.png") 0 -40px no-repeat;
+    }
+    .denglu a:hover{
+        background-position: 0 -90px;
+    }
+
+    .partner{
+        margin: auto;
+    }
+    .partnert{
+        width: 300px;
+        height: 40px;
+        margin-left: 60px;
+        text-align: center;
+    }
+    .partner .lefthr{
+        width: 85px;
+        height: 20px;
+        line-height: 20px;
+        float: left;
+    }
+    .partner .righthr{
+        width: 85px;
+        height: 20px;
+        line-height: 20px;
+        float: right;
+    }
+    .partner .midhr{
+        width: 130px;
+        height: 20px;
+        line-height: 20px;
+        float: left;
+        margin-top: 10px;
+    }
+    .partnerb{
+        margin-left: 95px;
+    }
+    .partnerb span{
+        width:30px;
+        height:30px;
+        float: left;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+    .partnerb .partfir{
+        background: url("images/login_sprite.png") no-repeat;
+    }
+    .partnerb .partsec{
+        background: url("images/login_sprite.png") -30px 0 no-repeat;
+    }
+    .partnerb .partthd{
+        background: url("images/login_sprite.png") -60px 0 no-repeat;
+    }
+    .partnerb .partfor{
+        background: url("images/login_sprite.png") -90px 0 no-repeat;
+    }
+    .partnerb .partfiv{
+        background: url("images/login_sprite.png") -120px 0 no-repeat;
+    }
+
+    .login_ewmg{
+        width: 85px;
+        height: 25px;
+        position: absolute;
+        right: 60px;
+        bottom: 10px;
+        background: url("images/login_sprite.png") 0 140px;
+    }
+    .login_codego{
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: url("images/login_sprite.png") 0 110px;
+    }
+</style>
